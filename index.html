@@ -11,9 +11,8 @@
 
 <div id="app">
     <h1>{{title}}</h1>
-    <p>{{entry}}</p>
     <form>
-        <input type="text" v-model="entry">
+        <input type="text" v-model="items.text">
         <input @click="add" type="submit" value="Add">
     </form>
 
@@ -35,7 +34,7 @@
         },
         methods: {
             add: function(){
-                this.items.push({text: this.entry},)
+                this.items.push({text: this.items.text},)
             }
         }
     })
